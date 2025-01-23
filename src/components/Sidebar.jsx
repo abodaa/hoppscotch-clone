@@ -24,7 +24,7 @@ export default function Sidebar() {
           <Link
             href={route}
             key={index}
-            className={`p-4 text-xl ${
+            className={`p-3 text-xl ${
               isActive
                 ? "border-primaryaccent border-l-2 text-foreground bg-cardbackground"
                 : "hover:bg-cardbackground text-secondarytext"
@@ -34,15 +34,6 @@ export default function Sidebar() {
           </Link>
         );
       })}
-      {/* <div className="p-4 bg-cardbackground text-xl">
-        <BiLogoGraphql />
-      </div>
-      <div className="p-4 bg-cardbackground text-xl">
-        <CiGlobe />
-      </div>
-      <div className="p-4 bg-cardbackground text-xl">
-        <CiSettings />
-      </div> */}
     </div>
   );
 }

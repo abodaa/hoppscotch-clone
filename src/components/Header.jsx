@@ -29,7 +29,7 @@ export default function Header() {
           <HiOutlineSupport className="cursor-pointer p-1 rounded-md transition-all duration-300 ease-in-out hover:bg-cardbackground hover:text-foreground" />
         </div>
       </div>
-      {/* Login sectio */}
+      {/* Login section */}
       <div className="flex items-center capitalize gap-2 text-xs">
         <button className="hidden items-center gap-2 border-green-100 border-2 px-4 py-2 font-bold rounded-md bg-green-100/35 text-green-600 md:flex">
           <LuCloudUpload className="text-lg " />

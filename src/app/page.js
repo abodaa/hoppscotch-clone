@@ -2,7 +2,7 @@
 
 import Response from "@/components/Response";
 import { useState, useRef } from "react";
-
+import LeftToptabsMenu from "@/components/LeftTopTabsMenu";
 const RestRequestPage = () => {
   const containerRef = useRef(null);
   const [leftWidth, setLeftWidth] = useState("70%");
@@ -87,8 +87,8 @@ const RestRequestPage = () => {
           style={{ width: leftWidth }}
         >
           {/* Left Top */}
-          <div className="overflow-auto p-4" style={{ height: leftTopHeight }}>
-            Left Top Element
+          <div className="overflow-auto" style={{ height: leftTopHeight }}>
+            <LeftToptabsMenu />
           </div>
           {/* Custom Resize Handle for the left section */}
           <div

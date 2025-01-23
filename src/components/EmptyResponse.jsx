@@ -11,7 +11,6 @@ export default function Response() {
   return (
     <div className="flex flex-col">
       <div className="flex flex-col items-end self-center justify-center mx-auto gap-3 text-xs text-secondarytext">
-        {/* First */}
         {items.map((item, index) => {
           return (
             <div key={index} className="flex gap-2">
