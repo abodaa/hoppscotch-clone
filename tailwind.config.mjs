@@ -10,6 +10,13 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        secondarytext: "var(--secondarytext)",
+        cardbackground: "var(--cardbackground)",
+        primaryaccent: "var(--primaryaccent)",
+        secondaryaccent: "var(--secondaryaccent)",
+        error: "var(--error)",
+        hoverfocus: "var(--hoverfocus)",
+        border: "var(--border)",
       },
     },
   },
