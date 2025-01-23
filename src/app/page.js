@@ -1,5 +1,6 @@
 "use client";
 
+import Response from "@/components/Response";
 import { useState, useRef } from "react";
 
 const RestRequestPage = () => {
@@ -100,7 +101,7 @@ const RestRequestPage = () => {
             className="overflow-auto p-4 min-w-[60%]"
             style={{ height: `calc(100% - ${leftTopHeight} - 5px)` }}
           >
-            Left Bottom Element
+            <Response />
           </div>
         </div>
 
