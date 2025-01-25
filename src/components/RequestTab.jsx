@@ -1,7 +1,6 @@
 import RequestTabsNav from "./RequestTabsNav";
 import TabsList from "./TabsList";
 import RequestInput from "./RequestInput";
-import Response from "./Response";
 import { useState } from "react";
 
 export default function RequestTab(props) {

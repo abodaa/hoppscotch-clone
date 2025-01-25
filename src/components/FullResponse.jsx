@@ -1,5 +1,4 @@
 import { responseData } from "@/responseData";
-
 export default function FullResponse() {
   return (
     <div>

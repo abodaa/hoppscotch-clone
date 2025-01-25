@@ -8,7 +8,6 @@ export default function RequestTabsNav({
   handleDeleteTab,
   handleAddTab,
   handleTabClick,
-  children,
 }) {
   return (
     <>

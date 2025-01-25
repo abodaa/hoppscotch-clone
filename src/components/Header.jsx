@@ -1,9 +1,15 @@
+"use client";
 import { AiOutlineDownload } from "react-icons/ai";
 import { IoSearch } from "react-icons/io5";
 import { LuCloudUpload } from "react-icons/lu";
 import { HiOutlineSupport } from "react-icons/hi";
 
+import Search from "./Search";
+import { useState } from "react";
+
 export default function Header() {
+  const [searchOpen, setSearchOpen] = useState(false);
+
   return (
     <div className="flex items-center text-sm justify-between px-4 py-2 border-b-2 border-cardbackground">
       {/* Logo sectio*/}
@@ -12,7 +18,10 @@ export default function Header() {
       </button>
       {/* Search section */}
       <div className="flex items-center gap-2 w-full max-w-[400px] text-secondarytext">
-        <div className="flex items-center justify-between w-full bg-cardbackground rounded-md p-2 cursor-text transition-all duration-300 ease-in-out hover:bg-[#f5f5f5]/60">
+        <div
+          onClick={() => setSearchOpen(true)}
+          className="flex items-center justify-between w-full bg-cardbackground rounded-md p-2 cursor-text transition-all duration-300 ease-in-out hover:bg-[#f5f5f5]/60"
+        >
           <div className="flex items-center gap-2">
             <IoSearch className="text-lg" />
             <p className="text-xs font-semibold">Search</p>
@@ -39,6 +48,9 @@ export default function Header() {
           Login
         </button>
       </div>
+
+      {/* Search Component */}
+      {searchOpen && <Search onClose={setSearchOpen} />}
     </div>
   );
 }
