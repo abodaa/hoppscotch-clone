@@ -1,6 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+// import RightSectionSideBar from "@/components/RightSectionSideBar";
+
+
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 
@@ -29,6 +32,7 @@ export default function RootLayout({ children }) {
         <div className="flex items-start h-screen">
           <Sidebar />
           {children}
+          {/* <RightSectionSideBar /> */}
         </div>
       </body>
     </html>

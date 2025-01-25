@@ -3,6 +3,8 @@
 import Response from "@/components/Response";
 import { useState, useRef } from "react";
 import RequestTab from "@/components/RequestTab";
+import RightSectionSideBar from "@/components/RightSectionSideBar";
+import RightSectionContent from "@/components/RightSectionContent";
 const RestRequestPage = (props) => {
   const containerRef = useRef(null);
   const [leftWidth, setLeftWidth] = useState("70%");
@@ -125,10 +127,11 @@ const RestRequestPage = (props) => {
 
         {/* Right Pane */}
         <div
-          className="overflow-auto p-4 min-w-[30%]"
+          className="overflow-auto flex items-start justify-between gap-2 min-w-[30%]"
           style={{ width: `calc(100% - ${leftWidth} - 5px)` }}
         >
-          Right Element
+          <RightSectionSideBar />
+          <RightSectionContent />
         </div>
       </div>
     </>

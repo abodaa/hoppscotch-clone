@@ -1,4 +1,6 @@
 "use client";
+import { Tooltip } from "react-tooltip";
+
 import { MdInsertLink } from "react-icons/md";
 import { BiLogoGraphql } from "react-icons/bi";
 import { CiGlobe } from "react-icons/ci";
@@ -17,8 +19,10 @@ export default function Sidebar() {
     { Icon: CiSettings, label: "Community", route: "/community" },
   ];
   return (
-    <div className="border-2 border-cardbackground flex flex-col h-screen text-secondarytext">
-      {menuItems.map(({ Icon, label, route }, index) => {
+    <div className="border-2 border-cardbackground flex flex-col h-screen text-secondarytext z-30">
+      {/* Tooltip component */}
+      <Tooltip id="sidebar-menu-tooltip" place="right" />
+      {menuItems.map(({ Icon, route, label }, index) => {
         const isActive = pathName === route;
         return (
           <Link
@@ -29,6 +33,8 @@ export default function Sidebar() {
                 ? "border-primaryaccent border-l-2 text-foreground bg-cardbackground"
                 : "hover:bg-cardbackground text-secondarytext"
             }`}
+            data-tooltip-id="sidebar-menu-tooltip"
+            data-tooltip-content={label}
           >
             <Icon />
           </Link>
