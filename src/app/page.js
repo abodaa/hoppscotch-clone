@@ -2,8 +2,8 @@
 
 import Response from "@/components/Response";
 import { useState, useRef } from "react";
-import LeftToptabsMenu from "@/components/LeftTopTabsMenu";
-const RestRequestPage = () => {
+import RequestTab from "@/components/RequestTab";
+const RestRequestPage = (props) => {
   const containerRef = useRef(null);
   const [leftWidth, setLeftWidth] = useState("70%");
   const [isResizing, setIsResizing] = useState(false);
@@ -11,6 +11,8 @@ const RestRequestPage = () => {
   const leftContainerRef = useRef(null);
   const [leftTopHeight, setLeftTopHeight] = useState("70%");
   const [isLeftResizing, setIsLeftResizing] = useState(false);
+
+  const [fullResponse, setFullResponse] = useState(false);
 
   const startResizing = () => {
     setIsResizing(true);
@@ -87,8 +89,14 @@ const RestRequestPage = () => {
           style={{ width: leftWidth }}
         >
           {/* Left Top */}
-          <div className="overflow-auto" style={{ height: leftTopHeight }}>
-            <LeftToptabsMenu />
+          <div
+            className="overflow-auto h-full"
+            style={{ height: leftTopHeight }}
+          >
+            <RequestTab
+              fullResponse={fullResponse}
+              setFullResponse={setFullResponse}
+            />
           </div>
           {/* Custom Resize Handle for the left section */}
           <div
@@ -98,10 +106,13 @@ const RestRequestPage = () => {
           ></div>
           {/* Left Bottom */}
           <div
-            className="overflow-auto p-4 min-w-[60%]"
+            className="overflow-auto  p-4 "
             style={{ height: `calc(100% - ${leftTopHeight} - 5px)` }}
           >
-            <Response />
+            <Response
+              fullResponse={fullResponse}
+              setFullResponse={setFullResponse}
+            />
           </div>
         </div>
 

@@ -1,8 +1,10 @@
-import EmptyResponse from "@/components/EmptyResponse";
-export default function Response() {
+import EmptyResponse from "./EmptyResponse";
+import FullResponse from "./FullResponse";
+
+export default function Response(props) {
   return (
     <div className="">
-      <EmptyResponse />
+      {!props.fullResponse ? <EmptyResponse /> : <FullResponse />}
     </div>
   );
 }
